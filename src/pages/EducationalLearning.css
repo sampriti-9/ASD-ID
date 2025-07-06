@@ -1,0 +1,230 @@
+.edu-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffecd1 0%, #feddd2 50%, #ffecd1 100%);
+  padding: 20px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.header-card {
+  background: white;
+  border-radius: 25px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.header-card h2 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: #4db6b6;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.subject-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.subject-card {
+  background: white;
+  border-radius: 25px;
+  padding: 40px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border: 3px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.subject-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.subject-card:hover .emoji-icon {
+  transform: scale(1.2) rotate(10deg);
+  animation: none;
+}
+
+.subject-card.selected {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Color variations for cards */
+.subject-card.pink {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+  border: 3px solid #ff7b7b;
+}
+
+.subject-card.blue {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  border: 3px solid #54c7e0;
+}
+
+.subject-card.green {
+  background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
+  border: 3px solid #84d4a4;
+}
+
+.subject-card.orange {
+  background: linear-gradient(135deg, #fad0c4 0%, #ffd1ff 100%);
+  border: 3px solid #ff9a8b;
+}
+
+.card-icon {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+
+.emoji-icon {
+  font-size: 3.5rem;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.subject-card h3 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #2c3e50;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subject-content {
+  margin-top: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.subject-details {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.subject-details h3 {
+  color: #4db6b6;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.subject-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.subject-details li {
+  margin-bottom: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.subject-details li:hover {
+  background: #e9ecef;
+  transform: translateX(5px);
+}
+
+.link-button {
+  background: linear-gradient(135deg, #4db6b6 0%, #3a9999 100%);
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  font-family: inherit;
+}
+
+.link-button:hover {
+  background: linear-gradient(135deg, #3a9999 0%, #2d7a7a 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(77, 182, 182, 0.3);
+}
+
+.subject-details a {
+  color: #4db6b6;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.subject-details a:hover {
+  color: #3a9999;
+  transform: translateX(5px);
+}
+
+.coming-soon {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #7f8c8d;
+  font-weight: bold;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .edu-container {
+    padding: 15px;
+  }
+  
+  .header-card h2 {
+    font-size: 2rem;
+  }
+  
+  .subject-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .subject-card {
+    padding: 30px 15px;
+  }
+  
+  .subject-card h3 {
+    font-size: 1.5rem;
+  }
+}

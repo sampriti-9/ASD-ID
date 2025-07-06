@@ -1,0 +1,283 @@
+/* AudioBooks.css */
+.audio-books-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+    background-color: #F9F9FF;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .audio-books-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #FFE1A8;
+    border-radius: 15px;
+    position: relative;
+  }
+  
+  .audio-books-header h1 {
+    color: #5E4B56;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .audio-books-header p {
+    color: #5E4B56;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .audio-icon {
+    font-size: 2.8rem;
+  }
+  
+  .back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #FFC4D6;
+    color: #5E4B56;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #FF9EB7;
+    transform: scale(1.05);
+  }
+  
+  .back-arrow {
+    margin-right: 5px;
+    font-size: 1.2rem;
+  }
+  
+  .age-filter {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .age-filter button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    background-color: #E0E0FF;
+    color: #5E4B56;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .age-filter button:hover {
+    background-color: #BEBEFF;
+    transform: scale(1.05);
+  }
+  
+  .age-filter button.active {
+    background-color: #9191FF;
+    color: white;
+  }
+  
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+  }
+  
+  .book-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .book-cover {
+    height: 180px;
+    overflow: hidden;
+  }
+  
+  .placeholder-cover {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .book-emoji {
+    font-size: 3rem;
+  }
+  
+  .book-title-overlay {
+    position: absolute;
+    bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    max-width: 90%;
+    text-align: center;
+  }
+  
+  .book-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  .book-info h3 {
+    margin-top: 0;
+    color: #5E4B56;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+  
+  .book-description {
+    color: #666;
+    margin-bottom: 15px;
+    flex-grow: 1;
+  }
+  
+  .book-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .book-tag {
+    background-color: #E8F4FF;
+    color: #5E4B56;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+  }
+  
+  .book-duration {
+    background-color: #FFEDE8;
+    color: #5E4B56;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+  }
+  
+  .play-button {
+    background-color: #7FC8FF;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .play-button:hover {
+    background-color: #56B0FF;
+  }
+  
+  .play-button.playing {
+    background-color: #FF9B9B;
+  }
+  
+  .play-button.playing:hover {
+    background-color: #FF7878;
+  }
+  
+  .teacher-note {
+    background-color: #E6FFF2;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 30px;
+  }
+  
+  .teacher-note h3 {
+    color: #5E4B56;
+    margin-top: 0;
+    font-size: 1.3rem;
+  }
+  
+  .teacher-note p {
+    color: #5E4B56;
+    margin-bottom: 15px;
+  }
+  
+  .teacher-note ul {
+    color: #5E4B56;
+    padding-left: 20px;
+  }
+  
+  .teacher-note li {
+    margin-bottom: 8px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .books-grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .audio-books-header h1 {
+      font-size: 2rem;
+    }
+    
+    .back-button {
+      position: static;
+      margin-bottom: 15px;
+      display: inline-flex;
+    }
+    
+    .audio-books-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .books-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .age-filter {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .age-filter button {
+      width: 80%;
+    }
+  }

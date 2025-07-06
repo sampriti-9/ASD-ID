@@ -1,0 +1,94 @@
+.visual-learning-container {
+    padding: 20px;
+  }
+  
+  .visual-learning-header {
+    background-color: #ffe680; /* Light Yellow */
+    padding: 40px 20px;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .visual-learning-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #5b34da; /* Fun Purple */
+  }
+  
+  .visual-learning-header p {
+    font-size: 1.2rem;
+    color: #444;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .visual-learning-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .visual-card {
+    background-color: #ffd6d6;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    width: 280px;
+    height: 300px; /* 👈 Fixed height add kar diya */
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s;
+    display: flex; /* 👈 flexbox lagaya */
+    flex-direction: column;
+    justify-content: space-between; /* 👈 content upar aur button neeche */
+  }
+  
+  .visual-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    flex-grow: 1; /* 👈 paragraph khud space le lega */
+  }
+  
+  
+  .visual-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+
+  
+  .visual-card button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .visual-card button:hover {
+    background-color: #0056b3;
+  }
+  
+  .pin {
+    width: 14px;
+    height: 14px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Floating animation */
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+  }
+  

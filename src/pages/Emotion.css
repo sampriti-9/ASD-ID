@@ -1,0 +1,92 @@
+.progress-page {
+  text-align: center;
+  padding: 30px;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f0f8ff;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.input-section {
+  margin-bottom: 20px;
+}
+
+.name-input {
+  padding: 10px;
+  font-size: 16px;
+  width: 280px;
+  border: 2px solid #4caf50;
+  border-radius: 8px;
+  outline: none;
+}
+
+.start-button,
+.stop-button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.start-button:hover,
+.stop-button:hover {
+  background-color: #388e3c;
+}
+
+.camera-section {
+  margin-top: 30px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.results-section {
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.results-section h2 {
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.students-table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.students-table th,
+.students-table td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: center;
+}
+
+.students-table th {
+  background-color: #e0f7fa;
+  color: #333;
+  font-weight: bold;
+}
+
+.students-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.students-table tr:hover {
+  background-color: #f1f1f1;
+}

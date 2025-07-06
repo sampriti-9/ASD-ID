@@ -1,0 +1,163 @@
+/* FunLearning.css */
+.fun-learning-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: 'Comic Sans MS', 'Arial', sans-serif;
+  }
+  
+  .header-banner {
+    background-color: #ffdd77;
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+  }
+  
+  .header-banner h1 {
+    color: #7366ff;
+    margin-bottom: 0.5rem;
+    font-size: 2.2rem;
+  }
+  
+  .header-banner p {
+    color: #555;
+    font-size: 1.1rem;
+  }
+  
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .activity-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    min-height: 200px;
+  }
+  
+  .activity-card:nth-child(1) {
+    background-color: #a2d2ff;
+  }
+  
+  .activity-card:nth-child(2) {
+    background-color: #bde0fe;
+  }
+  
+  .activity-card:nth-child(3) {
+    background-color: #ffafcc;
+  }
+  
+  .activity-card:nth-child(4) {
+    background-color: #cdb4db;
+  }
+  
+  .activity-card:nth-child(5) {
+    background-color: #ffc8dd;
+  }
+  
+  .card-hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+    animation: pulse 2s infinite;
+  }
+  
+  .activity-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .activity-card p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  
+  .edit-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .activity-card:hover .edit-button {
+    opacity: 1;
+  }
+  
+  .info-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  
+  .info-box {
+    background-color: #f8f9fa;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .info-box h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .info-box p {
+    color: #555;
+    font-size: 0.95rem;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .cards-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .info-footer {
+      grid-template-columns: 1fr;
+    }
+  }

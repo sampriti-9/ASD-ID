@@ -1,0 +1,117 @@
+/* ImageBasedSentenceBuilder.css */
+.aac-app {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    position: relative;
+    background-color: #fdf6f0; /* Soft background */
+}
+
+/* Top Controls */
+.top-controls {
+    display: flex;
+    background-color: #a0c4ff; /* Soft pastel blue */
+    color: white;
+    padding: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.control-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    width: 70px;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.control-btn:hover {
+    transform: scale(1.05);
+    background-color: #ffe0e0; /* Soft pink hover */
+}
+
+/* Main Card Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+    padding: 15px;
+    overflow-y: auto;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: center;
+    min-height: 130px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.card-emoji {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    line-height: 1.2;
+}
+
+/* Sentence Display */
+.sentence-display {
+    padding: 15px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    font-size: 1.2rem;
+    min-height: 60px;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1000px) {
+    .card-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .control-btn {
+        width: auto;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 500px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

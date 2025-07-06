@@ -1,0 +1,333 @@
+/* Wrapper and Layout */
+.parent-dashboard-wrapper {
+  display: flex;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  background-color: #f3f7fc;
+}
+
+/* Sidebar */
+.parent-sidebar {
+  width: 250px;
+  background: linear-gradient(180deg,rgb(88, 92, 228),white);
+  color: rgb(4, 4, 48);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 10px;
+}
+
+.parent-logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.parent-sun-logo {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: #ffeb3b;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.parent-sun-ray {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #fff176;
+  border-radius: 50%;
+}
+
+.ray1 { top: -5px; left: 50%; transform: translateX(-50%); }
+.ray2 { bottom: -5px; left: 50%; transform: translateX(-50%); }
+.ray3 { left: -5px; top: 50%; transform: translateY(-50%); }
+.ray4 { right: -5px; top: 50%; transform: translateY(-50%); }
+
+.parent-sun-face {
+  font-size: 24px;
+  text-align: center;
+  line-height: 60px;
+}
+
+.parent-title {
+  font-size: 24px;
+  margin: 0;
+}
+
+.parent-nav-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.parent-nav-btn {
+  background: none;
+  border: none;
+  color: white;
+  text-align: left;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.parent-nav-btn:hover,
+.parent-nav-btn.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.parent-settings-btn {
+  margin-top: auto;
+  background: #3949ab;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Main Content */
+.parent-main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.parent-top-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.parent-notification-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.parent-notification-bell {
+  position: relative;
+  font-size: 20px;
+}
+
+.parent-notification-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+.parent-user-profile {
+  background: #c5cae9;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parent-profile-circle {
+  font-weight: bold;
+}
+
+/* Greeting */
+.parent-greeting {
+  background: #e3f2fd;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Features */
+.parent-features-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.parent-dashboard-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.parent-card-header {
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.parent-card-content {
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  background: #f9f9f9;
+}
+
+
+
+
+/* Chatbot */
+.parent-chatbot-wrapper {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.parent-chatbot-toggle {
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.parent-chatbot-window {
+  background: white;
+  border: 1px solid #ddd;
+  width: 300px;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}
+
+.parent-chatbot-header {
+  background: #3f51b5;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.parent-chatbot-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background: #f1f1f1;
+}
+
+.parent-chat-msg {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 8px;
+  max-width: 80%;
+}
+
+.parent-chat-msg.bot {
+  background-color: #e0e0e0;
+  align-self: flex-start;
+}
+
+.parent-chat-msg.user {
+  background-color: #c5cae9;
+  align-self: flex-end;
+}
+
+.parent-chatbot-input {
+  display: flex;
+  padding: 10px;
+  background: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.parent-chatbot-input input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin-right: 8px;
+}
+
+.parent-chatbot-input button {
+  background: #3f51b5;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+/* --- Improved Progress Section --- */
+.parent-rewards-section {
+  margin-top: 40px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+.parent-rewards-section h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #333;
+  border-left: 6px solid #ff9800;
+  padding-left: 10px;
+}
+
+/* Section Titles */
+.parent-progress-section {
+  margin-bottom: 25px;
+  background: #f9f9f9;
+  padding: 15px 20px;
+  border-left: 5px solid #4fc3f7;
+  border-radius: 8px;
+}
+
+.parent-progress-section h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+/* Each progress input */
+.progress-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.progress-item label {
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: #555;
+}
+
+.progress-item input[type="text"] {
+  background-color: #e8f0fe;
+  border: 1px solid #cfd8dc;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .parent-rewards-section {
+    padding: 15px;
+  }
+
+  .progress-item input[type="text"] {
+    font-size: 13px;
+  }
+}
