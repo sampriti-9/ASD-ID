@@ -1,0 +1,25 @@
+/* Animations */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-30px) rotate(10deg); }
+}
+
+button:hover {
+  transform: translateY(-2px) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem !important;
+  }
+
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
+}

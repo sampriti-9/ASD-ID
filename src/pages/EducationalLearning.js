@@ -67,19 +67,22 @@ const MathContent = ({ navigate }) => (
   </div>
 );
 
-// ✅ Updated English Section
 const EnglishContent = ({ navigate }) => (
   <div className="subject-details">
     <h3>English Topics</h3>
     <ul>
       <li>
-        <button className="link-button" onClick={() => navigate('/alphabet-video')}>
+        <button className="link-button" onClick={() => navigate('/english/alphabet-video')}>
           Alphabets
         </button>
       </li>
-      <li><a href="/videos/phonics.mp4" target="_blank" rel="noopener noreferrer">Phonics</a></li>
       <li>
-        <button className="link-button" onClick={() => navigate('/three-letter-words')}>
+        <a href="/videos/phonics.mp4" target="_blank" rel="noopener noreferrer">
+          Phonics
+        </a>
+      </li>
+      <li>
+        <button className="link-button" onClick={() => navigate('/english/three-letter-words')}>
           3-letter Words Game
         </button>
       </li>

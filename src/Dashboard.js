@@ -123,7 +123,6 @@ const Dashboard = () => {
           <button className="nav-btn" onClick={() => navigate("/students")}>🧒 Students</button>
           <button className="nav-btn" onClick={() => navigate("/fun-learning")}>🎮 Fun Learning</button>
           <button className="nav-btn" onClick={() => navigate("/emotion")}>📈 Emotion</button>
-          <button className="nav-btn" onClick={() => navigate("/parent-zone")}>👨‍👩‍👧 Parent Zone</button>
           <button className="nav-btn" onClick={() => navigate("/rewards")}>🎁 Rewards</button>
           <button className="nav-btn" onClick={() => navigate("/parent")}>👨‍👩‍👧 Parent Dashboard</button>
         </nav>

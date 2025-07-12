@@ -1,237 +1,197 @@
+/* Fullscreen and vibrant background */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Sans MS', 'Poppins', cursive;
+  background: linear-gradient(135deg, #ffe0ec, #f3d9ff);
+  height: 100%;
+  overflow-x: hidden;
+}
 
-
-.word-adventure-container {
+.min-h-screen {
   min-height: 100vh;
-  background: linear-gradient(to bottom right, #f3e8ff, #fdf2f8, #e0f2fe);
-  padding: 2rem;
-  font-family: 'Poppins', sans-serif;
-}
-
-.header-title {
-  font-size: 3rem;
-  font-weight: 700;
-  background: linear-gradient(to right, #9333ea, #ec4899);
-
-}
-
-.stats-bar {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
+  align-items: start;
+  padding: 20px;
+  background: linear-gradient(to bottom right, #fdf2f8, #e0c3fc);
 }
 
-.stats-pill {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: white;
-  padding: 0.5rem 1rem;
-  border-radius: 9999px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Emoji Buttons */
+button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Main container */
+.word-game-container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 30px;
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 2.8rem;
   font-weight: bold;
-  font-size: 1.1rem;
+  background: linear-gradient(to right, #d946ef, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.category-button {
-  padding: 0.5rem 1rem;
-  border-radius: 9999px;
-  font-weight: 600;
-  transition: transform 0.2s ease-in-out;
-  background: white;
-  color: #9333ea;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+/* Category Buttons */
+.category-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
 }
 
-.category-button:hover {
-  background: #f3e8ff;
-  transform: scale(1.05);
+.category-buttons button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #d1d5db;
+  font-size: 1.2rem;
+  color: #7c3aed;
+  box-shadow: 2px 4px 10px rgba(0,0,0,0.08);
 }
 
-.category-selected {
-  background: linear-gradient(to right, #9333ea, #ec4899);
+.category-buttons button.active {
+  background: linear-gradient(to right, #ec4899, #8b5cf6);
   color: white;
+  font-weight: bold;
   transform: scale(1.1);
 }
 
-.emoji-display {
-  font-size: 8rem;
-  transition: all 0.3s ease;
-}
-
-.sound-btn,
-.hint-btn {
-  position: absolute;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 9999px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-.sound-btn {
-  background-color: #3b82f6;
-  left: -0.75rem;
-  top: -0.75rem;
-}
-
-.hint-btn {
-  background-color: #facc15;
-  right: -0.75rem;
-  top: -0.75rem;
-}
-
-.option-button {
-  background: linear-gradient(to bottom right, #f3f4f6, #e5e7eb);
-  padding: 1rem 1.5rem;
-  border-radius: 1.5rem;
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: #7c3aed;
-  transition: 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-}
-
-.option-button:hover {
-  background: #ede9fe;
-  transform: scale(1.05);
-}
-
-.option-correct {
-  background: #10b981 !important;
-  color: white !important;
-  transform: scale(1.05);
-}
-
-.option-incorrect {
-  background: #ef4444 !important;
-  color: white !important;
-  transform: scale(1.05);
-}
-/* General body styling */
-body {
-  background: linear-gradient(135deg, #fce3f9, #f5f7ff);
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #4a4a4a;
-}
-
-/* Title styling */
-h1 {
-  font-size: 2.5rem;
-  color: #ab2bcf;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-/* Score and sound section */
-.scoreboard {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
-}
-
-.scoreboard div {
-  background-color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 999px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  font-weight: 600;
-}
-
-/* Button styling */
-button {
-  padding: 0.7rem 1.2rem;
-  margin: 0.3rem;
-  background-color: #fdd835;
-  border: none;
+/* Main Card */
+.word-card {
+  background: #fff;
+  padding: 40px 30px;
   border-radius: 30px;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #fbc02d;
-}
-
-/* Selected Vowel Button */
-button.selected {
-  background: #8e24aa;
-  color: white;
-}
-
-/* Main card */
-.main-card {
-  background-color: white;
-  padding: 2rem;
-  margin: auto;
-  border-radius: 25px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-  max-width: 500px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
   text-align: center;
 }
 
-/* Emoji/image display */
-.emoji {
-  font-size: 6rem;
-  margin: 1rem 0;
+.word-card .emoji {
+  font-size: 5rem;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: transform 0.3s;
 }
 
-/* Word options */
+.word-card .emoji:hover {
+  transform: scale(1.2);
+}
+
+/* Hint Box */
+.hint-box {
+  margin-bottom: 20px;
+  padding: 12px 20px;
+  background: #fffbea;
+  border-left: 5px solid #facc15;
+  border-radius: 15px;
+  font-size: 1rem;
+  color: #92400e;
+}
+
+/* Options */
 .options {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  margin-top: 1.5rem;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
 .options button {
-  background-color: #f0f0f0;
-  color: #7b1fa2;
+  padding: 12px 18px;
   font-size: 1.2rem;
-  width: 100%;
-  border-radius: 15px;
+  border-radius: 18px;
+  background: #f3f4f6;
+  color: #4b5563;
+  border: 1px solid #e5e7eb;
 }
 
-/* Vowel buttons */
-.vowel-buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-  margin: 1rem 0;
+.options button:hover {
+  background: #ede9fe;
+  border-color: #c4b5fd;
+  color: #6b21a8;
 }
 
-/* Sound and hint buttons */
-.icon-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
+/* Feedback */
+.feedback {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 15px;
 }
 
-.icon-buttons button {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  background-color: #e0f7fa;
-  color: #00796b;
+.feedback.correct {
+  color: #10b981;
+  animation: bounce 1s;
 }
 
-/* Word progress text */
+.feedback.wrong {
+  color: #f97316;
+  animation: shake 0.5s;
+}
+
+/* Progress */
 .progress {
-  font-weight: 600;
-  margin-top: 1.5rem;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #6b7280;
 }
 
+/* Animations */
+@keyframes bounce {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+/* Floating Confetti */
+@keyframes float {
+  0%   { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-150px); opacity: 0; }
+}
+
+.floating-points {
+  animation: float 2s ease-out forwards;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .word-card {
+    padding: 20px;
+  }
+
+  .word-card .emoji {
+    font-size: 4rem;
+  }
+
+  .category-buttons button {
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+  }
+}

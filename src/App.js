@@ -21,8 +21,8 @@ import Register from './Register';
 import EducationalLearning from './pages/EducationalLearning';
 import MathTopics from './pages/MathTopics';
 import OperationsGame from './pages/OperationsGame';
-import AlphabetVideoPage from './pages/AlphabetVideoPage'
-import ThreeLetterWords from './pages/ThreeLetterWords';
+import AlphabetVideoPage from './pages/AlphabetVideoPage';
+import ThreeLetterWords from './pages/ThreeLetterWords'; // ✅ Correct import
 import './Firebase'; // Firebase initialization
 
 function App() {
@@ -48,10 +48,9 @@ function App() {
         <Route path="/parent" element={<ParentDashboard />} />
         <Route path="/math-topics" element={<MathTopics />} />
         <Route path="/operations-game" element={<OperationsGame />} />
-<Route path="/three-letter-words" element={<ThreeLetterWords />} /> 
-        <Route path="/educational-learning" element={<EducationalLearning />} /> {/* ✅ Fixed route here */}
+        <Route path="/educational-learning" element={<EducationalLearning />} />
         <Route path="/english/alphabet-video" element={<AlphabetVideoPage />} />
-
+        <Route path="/english/three-letter-words" element={<ThreeLetterWords />} /> {/* ✅ Final route */}
       </Routes>
     </Router>
   );
